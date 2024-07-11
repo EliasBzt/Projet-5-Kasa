@@ -1,0 +1,23 @@
+/* src/styles/Footer.scss */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 50px; /* Ajustez la taille du logo selon vos besoins */
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=Footer.css.map */

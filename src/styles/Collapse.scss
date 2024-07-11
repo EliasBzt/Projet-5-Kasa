@@ -1,0 +1,53 @@
+/* src/styles/Collapse.scss */
+.collapse {
+  width: 70%;
+  margin: 16px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  background-color: #F6F6F6;
+}
+
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 52px;
+  background-color: #FF6060;
+}
+
+.collapse-header h2 {
+  margin: 15px;
+  color: white;
+}
+
+.collapse-icon {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-135deg);
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.collapse-icon.rotate {
+  transform: rotate(45deg);
+}
+
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding: 0 16px;
+}
+
+.collapse.open .collapse-content {
+  max-height: 500px; /* Ajustez la hauteur maximale selon vos besoins */
+  opacity: 1;
+  padding: 16px; /* Ajouter du padding lorsque l'élément est ouvert */
+}

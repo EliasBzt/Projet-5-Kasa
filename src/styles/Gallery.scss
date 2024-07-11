@@ -1,0 +1,14 @@
+/* src/styles/Gallery.scss */
+.gallery {
+    width: 84%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+    align-items: center;
+    margin: 25px;
+  }
+  

@@ -1,0 +1,37 @@
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.error-container h1 {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0;
+  color: #FF6060;
+}
+
+.error-container p {
+  font-size: 1.5rem;
+  margin: 50px;
+  color: #FF6060;
+}
+
+.home-link {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .error-container h1 {
+    font-size: 200px;
+  }
+}

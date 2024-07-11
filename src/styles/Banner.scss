@@ -1,0 +1,29 @@
+/* src/styles/Banner.scss */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 84%;
+  height: 223px;
+  border-radius: 25px;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
