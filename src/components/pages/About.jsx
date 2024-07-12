@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../Banner';
 import Collapse from '../Collapse';
-import bannerImage from '../../assets/banner2.jpg'; // Assurez-vous que ce chemin est correct
+import bannerImage from '../../assets/banner2.jpg'; 
 import '../../styles/About.scss';
 
 const About = () => {

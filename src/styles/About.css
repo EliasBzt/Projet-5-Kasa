@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* src/styles/About.scss */
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
 }
 
 .banner {
-  margin-bottom: 20px; /* Ajoutez un espace entre la bannière et le reste du contenu */
+  margin-bottom: 20px; 
 }
 
-/*# sourceMappingURL=About.css.map */
+

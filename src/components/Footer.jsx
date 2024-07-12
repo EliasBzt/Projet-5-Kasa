@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/logoWhite.png'; // Assurez-vous que le chemin est correct
-import '../styles/Footer.scss'; // Assurez-vous de créer ce fichier CSS pour styliser le footer
+import logo from '../assets/logoWhite.png';
+import '../styles/Footer.scss';
 
 const Footer = () => {
   return (
