@@ -6,65 +6,6 @@
   box-sizing: border-box;
 }
 
-.logement-image-container {
-  position: relative;
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-
-.logement-cover {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  max-height: 300px;
-  object-fit: cover;
-}
-
-.prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
-}
-
-.image-icone {
-  border: solid white;
-  border-width: 0 6px 6px 0;
-  display: inline-block;
-  padding: 15px;
-  transform: rotate(130deg);
-  transition: transform 0.3s ease;
-}
-
-.image-icone.rotate {
-  transform: rotate(320deg);
-}
-
-.image-counter {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
 .logement-header {
   display: flex;
   justify-content: space-between;
@@ -115,7 +56,7 @@
   font-size: 14px;
   width: auto;
   height: 25px;
-  border-radius: 10px ;
+  border-radius: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -174,34 +115,30 @@
   .logement-rating, .logement-host {
     display: none;
   }
-
   .host-rating-mobile {
     display: flex;
     justify-content: space-between;
   }
-
   .logement-host-mobile {
     display: flex;
     color: #FF6060;
   }
-
   .logement-rating-mobile {
     display: flex;
     align-items: center;
   }
-
   .logement-collapses {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 0;
   }
-
   .star {
     font-size: 25px;
   }
-
   .collapse {
     width: 90%;
   }
 }
+
+

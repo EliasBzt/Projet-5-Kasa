@@ -5,6 +5,7 @@ import Card from '../Card';
 import bannerImage from '../../assets/banner.jpg'; 
 import '../../styles/Gallery.scss';
 import '../../styles/Home.scss';
+import '../../styles/Card.scss';
 
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
       />
       <div className="gallery">
         {logements.map(logement => (
-          <Card key={logement.id} id={logement.id} title={logement.title} />
+           <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
         ))}
       </div>
     </div>

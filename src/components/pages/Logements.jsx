@@ -1,26 +1,24 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Collapse from '../Collapse';
 import logements from '../../data/logements.json';
 import '../../styles/Logements.scss';
+import Carousel from '../Carousel'; 
 
 const Logements = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const logement = logements.find(logement => logement.id === id);
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  useEffect(() => {
+    if (!logement) {
+      navigate('/error');
+    }
+  }, [logement, navigate]);
 
   if (!logement) {
-    return <p>Logement non trouvé</p>;
+    return null; 
   }
-
-  const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % logement.pictures.length);
-  };
-
-  const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + logement.pictures.length) % logement.pictures.length);
-  };
 
   const renderRating = (rating) => {
     const stars = [];
@@ -36,22 +34,7 @@ const Logements = () => {
 
   return (
     <div className="logement-container">
-      <div className="logement-image-container">
-        <img src={logement.pictures[currentImageIndex]} alt={logement.title} className="logement-cover" />
-        {logement.pictures.length > 1 && (
-          <>
-            <button className="prev-button" onClick={handlePrevImage}>
-              <span className="image-icone"></span>
-            </button>
-            <button className="next-button" onClick={handleNextImage}>
-              <span className="image-icone rotate"></span>
-            </button>
-            <div className="image-counter">
-              {currentImageIndex + 1}/{logement.pictures.length}
-            </div>
-          </>
-        )}
-      </div>
+      <Carousel pictures={logement.pictures} title={logement.title} />
       <div className="logement-header">
         <div className="logement-title">
           <h1 className="h1">{logement.title}</h1>
